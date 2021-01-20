@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#692acf</color>
+    <color name="primary_dark">#341969</color>
+    <color name="primary_light">#7953af</color>
+    <color name="secondary">#715fec</color>
+    <color name="accent">#c5a2cb</color>
+    <color name="text_brown">#453a31</color>
+
+
+    <color name="overlay_login">#E6C5A2CB</color>
+    <color name="overlay_form">#B3C5A2CB</color>
+
+    <color name="label_button">#341969</color>
+    <color name="hint">#99341969</color>
+
+    <color name="white">#fff</color>
+    <color name="white_50">#80FFFFFF</color>
+
+
+
+</resources>

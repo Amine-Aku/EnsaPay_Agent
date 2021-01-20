@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ensa Pay Agent</string>
+    <string name="nouveau_compte_de_paiement">Nouveau compte de paiement</string>
+    <string name="type_du_compte">Type du compte</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prénom</string>
+    <string name="telephone">Téléphone</string>
+    <string name="le_num_tel">Le téléphone du client</string>
+    <string name="l_email_du_client">l\'email du client (optionel)</string>
+
+
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='Ensa Pay Agent'
+include ':app'
