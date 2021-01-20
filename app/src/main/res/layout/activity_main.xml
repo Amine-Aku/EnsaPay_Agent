@@ -7,11 +7,25 @@
     android:background="@color/overlay_form"
     tools:context=".MainActivity">
 
+
+    <!--    title-->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_centerInParent="true"/>
+        android:id="@+id/title"
+        style="@style/title"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/app_name"
+        android:textSize="22sp" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/space"
+        android:layout_below="@id/title" />
 
     <com.luseen.spacenavigation.SpaceNavigationView
         android:id="@+id/space"
@@ -20,12 +34,12 @@
         android:layout_alignParentBottom="true"
         app:active_item_color="@color/label_button"
         app:centre_button_color="@color/label_button"
-        app:inactive_item_color="@color/overlay_form"
-        app:inactive_centre_button_icon_color="@color/white"
-        app:space_background_color="@color/white"
         app:centre_button_icon="@drawable/ic_add"
-        app:space_item_icon_size="@dimen/space_item_icon_default_size"
+        app:inactive_centre_button_icon_color="@color/white"
+        app:inactive_item_color="@color/overlay_form"
+        app:space_background_color="@color/white"
         app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_icon_size="@dimen/space_item_icon_default_size"
         app:space_item_text_size="@dimen/space_item_text_default_size" />
 
 </RelativeLayout>

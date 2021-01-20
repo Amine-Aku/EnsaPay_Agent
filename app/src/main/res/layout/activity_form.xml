@@ -8,17 +8,26 @@
 
 
 <!--    BG-->
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg_bank"
-       android:scaleType="centerCrop" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_bank" />
+    </ScrollView>
 
 <!--    overlay-->
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/overlay_form"/>
+        android:background="@color/overlay_form" />
 
 
 
@@ -36,145 +45,159 @@
 
         <TextView
             style="@style/title"
+            android:textSize="22sp"
             android:text="@string/nouveau_compte_de_paiement" />
     </LinearLayout>
 
 
     <!--    type du compte-->
 
-    <TextView
-        android:id="@+id/label_type_du_compte"
-        style="@style/label"
-        android:layout_marginTop="48dp"
-        android:text="@string/type_du_compte"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <RadioGroup
-        android:id="@+id/radio_type_compte"
-        style="@style/toolbar"
-        android:layout_marginHorizontal="15dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_type_du_compte">
-
-        <RadioButton
-            style="@style/radio_button"
-            android:text="200" />
-
-        <RadioButton
-            style="@style/radio_button"
-            android:text="5 000" />
-
-        <RadioButton
-            style="@style/radio_button"
-            android:text="20 000" />
-
-    </RadioGroup>
-
-
-<!--    nom & prenom-->
-
-
-    <!--    telephone-->
-
-    <GridLayout
-        android:id="@+id/gridLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:layout_marginTop="30dp"
-        android:columnCount="2"
-        android:rowCount="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio_type_compte">
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
 
-        <TextView
-            android:id="@+id/label_nom"
-            style="@style/label"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center"
-            android:text="@string/nom" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="50dp"
+            >
 
-        <TextView
-            android:id="@+id/label_prenom"
-            style="@style/label"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center"
-            android:text="@string/prenom" />
+            <TextView
+                android:id="@+id/label_type_du_compte"
+                style="@style/label"
+                android:text="@string/type_du_compte"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/field_nom"
-            style="@style/hint"
-            android:layout_width="170dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center"
-            android:hint="Le nom" />
+            <RadioGroup
+                android:id="@+id/radio_type_compte"
+                style="@style/toolbar"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_type_du_compte">
 
-        <EditText
-            android:id="@+id/field_prenom"
-            style="@style/hint"
-            android:layout_width="170dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center"
-            android:hint="Le prénom" />
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="200" />
 
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="5 000" />
 
-    </GridLayout>
+                <RadioButton
+                    style="@style/radio_button"
+                    android:text="20 000" />
 
-    <TextView
-        android:id="@+id/label_tel"
-        style="@style/label"
-        android:layout_marginTop="30dp"
-        android:text="@string/telephone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
-
-    <EditText
-        android:id="@+id/field_tel"
-        style="@style/hint"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="12dp"
-        android:hint="@string/le_num_tel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_tel" />
+            </RadioGroup>
 
 
-<!--    Email-->
-    <TextView
-        android:id="@+id/label_email"
-        style="@style/label"
-        android:layout_marginTop="30dp"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/field_tel" />
+            <!--    nom & prenom-->
 
-    <EditText
-        android:id="@+id/field_email"
-        style="@style/hint"
-        android:layout_marginHorizontal="25dp"
-        android:hint="@string/l_email_du_client"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_email" />
 
-<!--    enregistrer-->
-    <Button
-        android:id="@+id/btn_enregistrer"
-        style="@style/Big_Btn"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="60dp"
-        android:text="Enregistrer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/field_email" />
+            <!--    telephone-->
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:layout_marginTop="30dp"
+                android:columnCount="2"
+                android:rowCount="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_type_compte">
+
+                <TextView
+                    android:id="@+id/label_nom"
+                    style="@style/label"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:text="@string/nom" />
+
+                <TextView
+                    android:id="@+id/label_prenom"
+                    style="@style/label"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:text="@string/prenom" />
+
+                <EditText
+                    android:id="@+id/field_nom"
+                    style="@style/hint"
+                    android:layout_width="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:hint="Le nom" />
+
+                <EditText
+                    android:id="@+id/field_prenom"
+                    style="@style/hint"
+                    android:layout_width="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center"
+                    android:hint="Le prénom" />
+
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/label_tel"
+                style="@style/label"
+                android:layout_marginTop="30dp"
+                android:text="@string/telephone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+            <EditText
+                android:id="@+id/field_tel"
+                style="@style/hint"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/le_num_tel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_tel" />
+
+
+            <!--    Email-->
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/label"
+                android:layout_marginTop="30dp"
+                android:text="Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field_tel" />
+
+            <EditText
+                android:id="@+id/field_email"
+                style="@style/hint"
+                android:layout_marginHorizontal="25dp"
+                android:hint="@string/l_email_du_client"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_email" />
+
+            <!--    enregistrer-->
+            <Button
+                android:id="@+id/btn_enregistrer"
+                style="@style/Big_Btn"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="60dp"
+                android:text="Enregistrer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field_email" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

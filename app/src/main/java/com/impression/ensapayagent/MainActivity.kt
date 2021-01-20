@@ -1,9 +1,12 @@
 package com.impression.ensapayagent
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.impression.ensapayagent.fragments.HomeFragment
+import com.impression.ensapayagent.fragments.ProfileFragment
 import com.luseen.spacenavigation.SpaceItem
 import com.luseen.spacenavigation.SpaceNavigationView
 import com.luseen.spacenavigation.SpaceOnClickListener
@@ -17,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bottomNavigation(savedInstanceState)
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFragment()).commit()
+
 
     }
 
@@ -33,13 +38,20 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onItemReselected(itemIndex: Int, itemName: String?) {
-                Toast.makeText(this@MainActivity, "$itemIndex $itemName", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MainActivity, "$itemIndex $itemName", Toast.LENGTH_SHORT).show()
             }
 
             override fun onItemClick(itemIndex: Int, itemName: String?) {
-                Toast.makeText(this@MainActivity, "$itemIndex $itemName", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MainActivity, "$itemIndex $itemName", Toast.LENGTH_SHORT).show()
+                var selectedFragment: Fragment? = null
+                when(itemName){
+                    "Acceuil" -> selectedFragment = HomeFragment()
+                    "Profil" -> selectedFragment = ProfileFragment()
+                }
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, selectedFragment!!).commit()
             }
         })
+
 
     }
 
