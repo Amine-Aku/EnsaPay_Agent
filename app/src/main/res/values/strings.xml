@@ -7,6 +7,12 @@
     <string name="telephone">Téléphone</string>
     <string name="le_num_tel">Le téléphone du client</string>
     <string name="l_email_du_client">l\'email du client (optionel)</string>
+    <string name="connectez_vous">Connectez-vous</string>
+    <string name="identifiant">Identifiant</string>
+    <string name="votre_identifiant">Votre identifiant</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="votre_mot_de_passe">Votre mot de passe</string>
+    <string name="se_connecter">Se connecter</string>
 
 
 </resources>

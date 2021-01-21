@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_bank" />
+    </ScrollView>
+
+    <!--    overlay-->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_login" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="50dp">
+
+            <!--    type du compte-->
+            <TextView
+                android:id="@+id/title"
+                style="@style/title"
+                android:layout_height="wrap_content"
+                android:text="@string/connectez_vous"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/label_tel"
+                style="@style/label"
+                android:layout_marginTop="70dp"
+                android:text="@string/identifiant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <EditText
+                android:id="@+id/field_tel"
+                style="@style/hint"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/votre_identifiant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_tel" />
+
+
+            <!--    Email-->
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/label"
+                android:layout_marginTop="30dp"
+                android:text="@string/mot_de_passe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field_tel" />
+
+            <EditText
+                android:id="@+id/field_email"
+                style="@style/hint"
+                android:layout_marginHorizontal="25dp"
+                android:hint="@string/votre_mot_de_passe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_email" />
+
+            <!--    enregistrer-->
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/Big_Btn"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="60dp"
+                android:onClick="login"
+                android:text="@string/se_connecter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field_email" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

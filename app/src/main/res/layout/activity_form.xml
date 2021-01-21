@@ -7,7 +7,7 @@
     tools:context=".FormActivity">
 
 
-<!--    BG-->
+    <!--    BG-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +22,7 @@
             android:src="@drawable/bg_bank" />
     </ScrollView>
 
-<!--    overlay-->
+    <!--    overlay-->
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -30,8 +30,7 @@
         android:background="@color/overlay_form" />
 
 
-
-<!--    toolbar-->
+    <!--    toolbar-->
     <LinearLayout
         android:id="@+id/linearLayout"
         style="@style/toolbar"
@@ -45,12 +44,10 @@
 
         <TextView
             style="@style/title"
-            android:textSize="22sp"
-            android:text="@string/nouveau_compte_de_paiement" />
+            android:text="@string/nouveau_compte_de_paiement"
+            android:textSize="22sp" />
     </LinearLayout>
 
-
-    <!--    type du compte-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -60,9 +57,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingVertical="50dp"
-            >
+            android:paddingVertical="50dp">
 
+            <!--    type du compte-->
             <TextView
                 android:id="@+id/label_type_du_compte"
                 style="@style/label"
