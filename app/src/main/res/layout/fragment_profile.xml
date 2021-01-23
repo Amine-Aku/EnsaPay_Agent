@@ -1,19 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+    android:gravity="center">
 
 
-    <TextView
-        android:id="@+id/title"
-        style="@style/title"
-        android:layout_height="50dp"
-        android:layout_centerInParent="true"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="Profil"
-        android:textSize="22sp" />
+
+    <!--    nom & prenom-->
+    <LinearLayout
+        android:id="@+id/layout_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/label_nom"
+            style="@style/label"
+            android:layout_width="120dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/nom" />
+
+        <TextView
+            android:id="@+id/field_nom"
+            style="@style/grid_field_text"
+            android:layout_width="0dp" />
+
+
+    </LinearLayout>
+
+    <!--    Email-->
+    <LinearLayout
+        android:id="@+id/layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_nom"
+        android:layout_marginHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/label_email"
+            style="@style/label"
+            android:layout_width="120dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/field_email"
+            style="@style/grid_field_text"
+            android:layout_width="0dp" />
+
+
+    </LinearLayout>
+
+    <!--    Telephone-->
+    <LinearLayout
+        android:id="@+id/layout_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_email"
+        android:layout_marginHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/label_tel"
+            style="@style/label"
+            android:layout_width="120dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/telephone" />
+
+        <TextView
+            android:id="@+id/field_tel"
+            style="@style/grid_field_text"
+            android:layout_width="0dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_tel"
+        android:layout_marginHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/label_id"
+            style="@style/label"
+            android:layout_width="120dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/identifiant" />
+
+        <TextView
+            android:id="@+id/field_id"
+            style="@style/grid_field_text"
+            android:layout_width="0dp" />
+
+
+    </LinearLayout>
+
+
+    <!--    Historique Button-->
+    <Button
+        android:id="@+id/btn_historique"
+        style="@style/Big_Btn"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/layout_id"
+        android:layout_alignParentRight="true"
+        android:paddingHorizontal="25dp"
+        android:text="@string/historique"
+        android:textSize="16sp" />
 
 </RelativeLayout>

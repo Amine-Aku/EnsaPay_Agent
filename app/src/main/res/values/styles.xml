@@ -64,9 +64,19 @@
         <item name="android:paddingRight">10dp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
-
-
     </style>
+
+    <style name="field_text" parent="hint">
+        <item name="android:background">@color/space_transparent</item>
+        <item name="android:textColor">@color/text_brown</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="grid_field_text" parent="field_text">
+        <item name="android:layout_weight">1</item>
+    </style>
+
 
     <style name="Big_Btn" parent="label">
         <item name="android:layout_width">match_parent</item>
