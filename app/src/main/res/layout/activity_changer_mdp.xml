@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ChangerMdpActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -43,78 +43,79 @@
                 android:id="@+id/title"
                 style="@style/title"
                 android:layout_height="wrap_content"
-                android:text="@string/connectez_vous"
+                android:text="@string/bienvenue_ensa_pay"
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <TextView
-                android:id="@+id/label_identifiant"
-                style="@style/label"
-                android:layout_marginTop="70dp"
-                android:text="@string/identifiant"
+                android:id="@+id/text_area"
+                style="@style/field_text"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="25dp"
+                android:text="@string/c_est_votre_1_fois"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title" />
 
+
+            <TextView
+                android:id="@+id/label_tel"
+                style="@style/label"
+                android:layout_marginTop="40dp"
+                android:text="@string/nouveau_mot_de_passe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_area" />
+
             <EditText
-                android:id="@+id/field_identifiant"
+                android:id="@+id/field_tel"
                 style="@style/hint"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="12dp"
-                android:text="ikram.makhloufi@gmail.com"
-                android:hint="@string/votre_identifiant"
+                android:inputType="textPassword"
+                android:hint="@string/votre_nouveau_mot_de_passe"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_identifiant" />
+                app:layout_constraintTop_toBottomOf="@+id/label_tel" />
 
 
             <!--    Email-->
             <TextView
-                android:id="@+id/label_mdp"
+                android:id="@+id/label_email"
                 style="@style/label"
                 android:layout_marginTop="30dp"
-                android:text="@string/mot_de_passe"
+                android:text="@string/confirmez_votre_mot_de_passe"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/field_identifiant" />
+                app:layout_constraintTop_toBottomOf="@+id/field_tel" />
 
             <EditText
-                android:id="@+id/field_mdp"
+                android:id="@+id/field_email"
                 style="@style/hint"
                 android:layout_marginHorizontal="25dp"
-                android:hint="@string/votre_mot_de_passe"
-                android:text="kW2^X^U8N"
                 android:inputType="textPassword"
+                android:hint="@string/confirmer_votre_mot_de_passe"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/label_mdp" />
+                app:layout_constraintTop_toBottomOf="@+id/label_email" />
 
             <!--    enregistrer-->
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_valider"
                 style="@style/Big_Btn"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="60dp"
-                android:onClick="login"
-                android:text="@string/se_connecter"
+                android:onClick="valider"
+                android:text="@string/valider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/field_mdp" />
-
-            <TextView
-                android:id="@+id/login_feedback_view"
-                style="@style/label"
-                android:textStyle="normal"
-                android:textColor="@android:color/holo_red_light"
-                android:layout_margin="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+                app:layout_constraintTop_toBottomOf="@+id/field_email" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

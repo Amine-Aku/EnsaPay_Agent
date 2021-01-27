@@ -9,17 +9,35 @@
     <string name="l_email_du_client">l\'email du client (optionel)</string>
 
 
-<!--    Login-->
+    <!--    Login-->
     <string name="connectez_vous">Connectez-vous</string>
     <string name="identifiant">Identifiant</string>
     <string name="votre_identifiant">Votre identifiant</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="votre_mot_de_passe">Votre mot de passe</string>
     <string name="se_connecter">Se connecter</string>
+    <string name="cnx_failed">La connexion a echoué</string>
+    <string name="incorrect_credentials">Identifiant ou mot de passe incorrect</string>
+
+<!--    Profile-->
     <string name="email">Email</string>
     <string name="historique">Historique</string>
+    <string name="acceuil">Acceuil</string>
+    <string name="profil">Profil</string>
+    <string name="se_deconnecter">Se déconnecter</string>
 
-    <!--    Profile-->
+<!--    Nouveau MDP-->
+    <string name="nouveau_mot_de_passe">Nouveau mot de passe</string>
+    <string name="votre_nouveau_mot_de_passe">Votre nouveau mot de passe</string>
+    <string name="confirmez_votre_mot_de_passe">Confirmez votre mot de passe</string>
+    <string name="confirmer_votre_mot_de_passe">Confirmer votre mot de passe</string>
+    <string name="valider">Valider</string>
+    <string name="bienvenue_ensa_pay">Bienvenue à Ensa Pay</string>
+    <string name="c_est_votre_1_fois">C’est votre première fois !\nVeuillez changer votre mot de passe pour continuer</string>
+
+
+
+    <!--    Changer mot de passe-->
 
 
 </resources>
