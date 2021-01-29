@@ -34,12 +34,37 @@
 
     </LinearLayout>
 
+    <!--   prenom-->
+    <LinearLayout
+        android:id="@+id/layout_prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_below="@+id/layout_nom">
+
+        <TextView
+            android:id="@+id/label_prenom"
+            style="@style/label"
+            android:layout_width="120dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/prenom" />
+
+        <TextView
+            android:id="@+id/field_prenom"
+            style="@style/grid_field_text"
+            android:layout_width="0dp" />
+
+
+    </LinearLayout>
+
     <!--    Email-->
     <LinearLayout
         android:id="@+id/layout_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layout_nom"
+        android:layout_below="@id/layout_prenom"
         android:layout_marginHorizontal="25dp">
 
         <TextView
@@ -85,49 +110,25 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_id"
-        android:layout_width="match_parent"
+        android:id="@+id/layout_btns"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout_tel"
-        android:layout_marginHorizontal="25dp">
-
-        <TextView
-            android:id="@+id/label_id"
-            style="@style/label"
-            android:layout_width="120dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:text="@string/identifiant" />
-
-        <TextView
-            android:id="@+id/field_id"
-            style="@style/grid_field_text"
-            android:layout_width="0dp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_btns"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout_id"
         android:layout_marginVertical="40dp"
         android:layout_marginHorizontal="25dp">
 
-        <Button
-            android:id="@+id/btn_historique"
-            style="@style/Big_Btn"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/layout_id"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            android:paddingHorizontal="10dp"
-            android:text="@string/historique"
-            android:textSize="14sp" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_historique"-->
+<!--            style="@style/Big_Btn"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:elevation="10dp"-->
+<!--            android:paddingHorizontal="10dp"-->
+<!--            android:text="@string/historique"-->
+<!--            android:textSize="14sp" />-->
 
         <Button
             android:id="@+id/btn_logout"
@@ -140,7 +141,7 @@
             android:paddingHorizontal="10dp"
             android:elevation="10dp"
             android:text="@string/se_deconnecter"
-            android:textColor="@color/label_button"
+            android:textColor="@android:color/holo_red_light"
             android:textSize="14sp" />
 
 

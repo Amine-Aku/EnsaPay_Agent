@@ -73,7 +73,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_area" />
 
             <EditText
-                android:id="@+id/field_tel"
+                android:id="@+id/field_nouveau_mdp"
                 style="@style/hint"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="12dp"
@@ -93,10 +93,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/field_tel" />
+                app:layout_constraintTop_toBottomOf="@+id/field_nouveau_mdp" />
 
             <EditText
-                android:id="@+id/field_email"
+                android:id="@+id/field_confirm_mdp"
                 style="@style/hint"
                 android:layout_marginHorizontal="25dp"
                 android:inputType="textPassword"
@@ -115,7 +115,7 @@
                 android:text="@string/valider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/field_email" />
+                app:layout_constraintTop_toBottomOf="@+id/field_confirm_mdp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -7,10 +7,13 @@ import java.util.*
 
 interface AgentService {
 
-    @GET("user/{id}")
+    @GET("userApp/currentAgent")
     fun getUser(@Header("Authorization") token: String?): Call<Agent>
 
-    @POST("register")
-    fun registerUser(@Body newUser: Agent): Call<String>
+    @GET("userApp/isFirstAuth")
+    fun isFirstAuth(@Header("Authorization") token: String?): Call<Boolean>
+
+    @POST("userApp/changeMdp")
+    fun changeMdp(@Header("Authorization") token: String?, @Body newMdp: String): Call<Void>
 
 }
