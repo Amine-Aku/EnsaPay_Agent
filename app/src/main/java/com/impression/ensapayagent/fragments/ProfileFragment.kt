@@ -1,24 +1,18 @@
 package com.impression.ensapayagent.fragments
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.impression.ensapayagent.LoginActivity
+import com.impression.ensapayagent.activities.LoginActivity
 import com.impression.ensapayagent.R
-import com.impression.ensapayagent.api.ApiClient
 import com.impression.ensapayagent.model.Agent
 import com.impression.ensapayagent.model.Cst
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class ProfileFragment: Fragment() {

@@ -1,10 +1,10 @@
-package com.impression.ensapayagent
+package com.impression.ensapayagent.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.impression.ensapayagent.R
 import com.impression.ensapayagent.fragments.HomeFragment
 import com.impression.ensapayagent.fragments.ProfileFragment
 import com.luseen.spacenavigation.SpaceItem
@@ -38,8 +38,12 @@ class MainActivity : AppCompatActivity() {
     private fun bottomNavigation(savedInstanceState: Bundle?) {
         navView = findViewById(R.id.space)
         navView.initWithSaveInstanceState(savedInstanceState)
-        navView.addSpaceItem(SpaceItem(_acceuil, R.drawable.ic_home))
-        navView.addSpaceItem(SpaceItem(_profil, R.drawable.ic_profile))
+        navView.addSpaceItem(SpaceItem(_acceuil,
+            R.drawable.ic_home
+        ))
+        navView.addSpaceItem(SpaceItem(_profil,
+            R.drawable.ic_profile
+        ))
 
         navView.setSpaceOnClickListener(object: SpaceOnClickListener{
             override fun onCentreButtonClick() {

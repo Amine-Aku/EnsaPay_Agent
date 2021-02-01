@@ -34,6 +34,7 @@
     <string name="valider">Valider</string>
     <string name="bienvenue_ensa_pay">Bienvenue à Ensa Pay</string>
     <string name="c_est_votre_1_fois">C’est votre première fois !\nVeuillez changer votre mot de passe pour continuer</string>
+    <string name="champs_vide">Champs vide</string>
 
 
     <!--    Changer mot de passe-->

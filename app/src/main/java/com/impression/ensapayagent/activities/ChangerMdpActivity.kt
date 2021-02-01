@@ -1,4 +1,4 @@
-package com.impression.ensapayagent
+package com.impression.ensapayagent.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import com.impression.ensapayagent.R
 import com.impression.ensapayagent.api.ApiClient
 import com.impression.ensapayagent.model.Cst
 import retrofit2.Call

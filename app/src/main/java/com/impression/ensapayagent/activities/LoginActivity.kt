@@ -1,4 +1,4 @@
-package com.impression.ensapayagent
+package com.impression.ensapayagent.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
-import com.google.gson.JsonObject
+import com.impression.ensapayagent.R
 import com.impression.ensapayagent.api.ApiClient
 import com.impression.ensapayagent.model.Agent
 import com.impression.ensapayagent.model.Cst

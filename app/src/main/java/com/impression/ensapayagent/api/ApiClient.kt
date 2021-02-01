@@ -3,6 +3,7 @@ package com.impression.ensapayagent.api
 import com.google.gson.GsonBuilder
 import com.impression.ensapayagent.services.AgentService
 import com.impression.ensapayagent.services.AuthenticationService
+import com.impression.ensapayagent.services.ClientService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -37,6 +38,9 @@ object ApiClient {
     fun getAuthenticationService(): AuthenticationService = getRetrofitInstance().create(AuthenticationService::class.java)
 
     fun getAppuserServices(): AgentService = getRetrofitInstance().create(AgentService::class.java)
+
+    fun getClientServices(): ClientService = getRetrofitInstance().create(ClientService::class.java)
+
 
 
 
