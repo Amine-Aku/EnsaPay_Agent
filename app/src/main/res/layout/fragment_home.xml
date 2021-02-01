@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/transparent">
 
@@ -9,7 +10,8 @@
         android:id="@+id/recycler_clients"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_client"/>
+        tools:listitem="@layout/item_client"
+        android:padding="15dp"/>
 
 
 <!--    <TextView-->

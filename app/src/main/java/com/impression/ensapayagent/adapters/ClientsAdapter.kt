@@ -38,7 +38,7 @@ class ClientsAdapter(private var context: Context, private var listClient: List<
             val client = comptePayment.client!!
             nomField.text = client.nom + " " + client.prenom
             numTelField.text = client.numTel
-            emailField.text = client.email
+            emailField.text = client.username
             typeCompteField.text = comptePayment.typeCompte
         }
 

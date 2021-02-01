@@ -48,7 +48,7 @@ class HomeFragment: Fragment() {
     }
 
     private fun retrofitCall(view: View) {
-        val call = ApiClient.getClientServices().getListClients(Cst.token)
+        val call = ApiClient.getClientServices().getListComptes(Cst.token)
         call.enqueue(object : Callback<List<ComptePayment>>{
             override fun onFailure(call: Call<List<ComptePayment>>, t: Throwable) {
                 val msg = t.message

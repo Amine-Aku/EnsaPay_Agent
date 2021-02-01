@@ -10,10 +10,10 @@ import retrofit2.http.POST
 
 interface ClientService {
 
-    @GET("comptePay/getAllClients")
-    fun getListClients(@Header("Authorization") token: String?): Call<List<ComptePayment>>
+    @GET("comptePay/allClients")
+    fun getListComptes(@Header("Authorization") token: String?): Call<List<ComptePayment>>
 
     @POST("comptePay/add")
-    fun createClient(@Header("Authorization") token: String?, @Body newCompte: ComptePayment): Call<Void>
+    fun createClient(@Header("Authorization") token: String?, @Body newCompte: ComptePayment): Call<String>
 
 }

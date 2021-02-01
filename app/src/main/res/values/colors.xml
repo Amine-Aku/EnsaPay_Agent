@@ -11,6 +11,7 @@
 
     <color name="overlay_login">#E6C5A2CB</color>
     <color name="overlay_form">#B3C5A2CB</color>
+    <color name="bg_card">#33FFFFFF</color>
 
     <color name="label_button">#341969</color>
     <color name="hint">#99341969</color>
